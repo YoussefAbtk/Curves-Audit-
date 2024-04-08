@@ -1,0 +1,21 @@
+corpusDir: "corpusCurves"
+testMode: assertion
+testLimit: 50000
+deployer: "0x10000"
+maxValue: 1000000000000000000000000000000000000000000
+balanceAddr: 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+allContracts: false
+codeSize: 0x6146
+sender: ["0x10000", "0x20000", "0x30000"]
+filterBlacklist: true
+filterFunctions:
+  [
+    "FeeSplitter.setCurves(Curves)",
+    "FeeSplitter.addFees(address)",
+    "FeeSplitter.onBalanceChange(address,address)",
+    "Curves.setFeeRedistributor(address)",
+    "Curves.setMaxFeePercent(uint256)",
+    "Curves.setProtocolFeePercent(uint256,address)",
+    "Curves.setExternalFeePercent(uint256,uint256,uint256)",
+    "Curves.setERC20Factory(address)",
+  ]
